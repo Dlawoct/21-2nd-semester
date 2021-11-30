@@ -9,9 +9,9 @@
 #define _DIST_MAX 410    //거리 최대
 #define _DIST_ALPHA 0.35 //EMA 필터링을 위한 알파값(0~1)
 
-#define _DUTY_MIN 1500
-#define _DUTY_NEU 1550
-#define _DUTY_MAX 1440
+#define _DUTY_MIN 1670
+#define _DUTY_NEU 1620
+#define _DUTY_MAX 1505
 
 #define _SERVO_ANGLE 30.0  
 #define _SERVO_SPEED 600
@@ -50,17 +50,17 @@ bool checkLocation;
 
 void setup() {
 // initialize GPIO pins for LED and attach servo 
-myservo.attach(PIN_SERVO); // attach servo
-pinMode(PIN_LED,OUTPUT); // initialize GPIO pins
+  myservo.attach(PIN_SERVO); // attach servo
+  pinMode(PIN_LED,OUTPUT); // initialize GPIO pins
 
 // initialize global variables
 
 // move servo to neutral position
-myservo.writeMicroseconds(_DUTY_NEU);
-duty_curr = _DUTY_NEU;
+  myservo.writeMicroseconds(_DUTY_NEU);
+  duty_curr = _DUTY_NEU;
 
 // initialize serial port
-Serial.begin(57600);
+  Serial.begin(57600);
 
 // convert angle speed into duty change per interval.
   duty_chg_per_interval = (_DUTY_MIN - _DUTY_MAX) * (_SERVO_SPEED / _SERVO_ANGLE ) * (_INTERVAL_SERVO / 1000.0);
