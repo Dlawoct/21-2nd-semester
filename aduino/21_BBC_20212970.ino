@@ -32,10 +32,10 @@ void loop() {
   Serial.println(dist_cali);
   
   if(dist_cali > 255) {
-    myservo.writeMicroseconds(900);
+    myservo.writeMicroseconds(1170);
   }
   else {
-    myservo.writeMicroseconds(1700);
+    myservo.writeMicroseconds(1400);
   }
   delay(20);
 }
