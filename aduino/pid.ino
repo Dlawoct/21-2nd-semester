@@ -6,11 +6,11 @@
 #define _DIST_TARGET 255  //탁구공위치
 #define _DIST_MIN 100   //거리 최소
 #define _DIST_MAX 410    //거리 최대
-#define _DIST_ALPHA 0.35 //EMA 필터링을 위한 알파값(0~1)
+#define _DIST_ALPHA 0.25 //EMA 필터링을 위한 알파값(0~1)
 
 #define _DUTY_MIN 1690  
 #define _DUTY_NEU 1660
-#define _DUTY_MAX 1580
+#define _DUTY_MAX 1560
 
 #define _SERVO_ANGLE 50 
 #define _SERVO_SPEED 550
@@ -21,7 +21,7 @@
 #define DELAY_MICROS  1500
 
 #define _KP 1
-#define _KD 50
+#define _KD 30
 #define _KI 0.01
 
 #define a 90
